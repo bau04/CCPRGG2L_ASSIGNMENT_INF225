@@ -22,5 +22,23 @@ public class App {
         } else {
             System.out.println("Invalid email!");
         }
+
+// ----------------------------------------------------------------------------------------------------
+
+        System.out.print("Enter cellphone number: ");
+        String studentNum = sc.nextLine();
+
+        Pattern pattern1 = Pattern.compile("^(09|\\+639)\\d{9}$");
+        Matcher matcher = pattern1.matcher(studentNum);
+
+        boolean match1 = matcher.matches();
+
+        if (match1) {
+            System.out.println("Valid cellphone number");
+        } else {
+            System.out.println("Invalid cellphone number");
+        }
+ 
     }
+
 }
